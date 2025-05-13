@@ -9,10 +9,32 @@ except Exception as e:
     nlp = None  # fallback to avoid crashing
 
 CATEGORY_KEYWORDS = {
-    "Infrastructure": ["wifi", "classroom", "ac", "fan", "electricity", "maintenance", "Hostel", "projector"],
-    "Academic": ["exam", "marks", "result", "assignment", "class", "teacher", "lecture"],
-    "Administration": ["fees", "payment", "admission", "document", "certificate", "id card"]
+    "Infrastructure": [
+        "wifi", "classroom", "ac", "fan", "electricity", "maintenance",
+        "projector", "blackboard", "whiteboard", "bench", "desk", "lights",
+        "leakage", "water", "lift", "elevator", "lab", "toilet", "washroom",
+        "building", "construction", "noise", "cleaning", "renovation"
+    ],
+    "Academic": [
+        "exam", "marks", "result", "assignment", "class", "teacher", "lecture",
+        "syllabus", "notes", "study material", "attendance", "timetable",
+        "subject", "homework", "grading", "evaluation", "doubt", "project",
+        "internals", "quiz", "lab marks"
+    ],
+    "Administration": [
+        "fees", "payment", "admission", "document", "certificate", "id card",
+        "scholarship", "refund", "registration", "form", "deadline", "leave",
+        "transfer", "late fine", "library card", "student record", "passport",
+        "bonafide", "verification"
+    ],
+    "Hostel": [
+        "room", "mess", "food", "warden", "water", "electricity", "cleaning",
+        "maintenance", "bed", "fan", "ac", "security", "gate", "curfew",
+        "laundry", "bathroom", "toilet", "roommate", "wifi", "TV", "noise",
+        "guest", "visitors", "hostel id", "complaint box", "mosquito"
+    ]
 }
+
 
 def classify_complaint(text):
     if nlp is None:
